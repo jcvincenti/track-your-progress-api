@@ -1,1 +1,1 @@
-GET http://localhost:3001/api/universidades
+GET http://localhost:3001/api/universidades/unq
