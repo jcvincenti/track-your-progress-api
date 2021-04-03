@@ -1,20 +1,20 @@
 const router = require('express').Router();
-const Universidad = require('../models/Universidad');
+const Carrera = require('../models/Carrera');
 
 router.get('/', async (request, response) => {
-    await Universidad
+    await Carrera
         .find({})
-        .then(universidad => {
-            response.json(universidad);
+        .then(carrera => {
+            response.json(carrera);
         })
 });
 
 router.get('/:codigo', async (request, response) => {
-    await Universidad
+    await Carrera
         .findOne({codigo: request.params.codigo})
-        .then(universidad => {
-            response.json(universidad);
+        .then(carrera => {
+            response.json(carrera);
         })
-});
+})
 
 module.exports = router;
